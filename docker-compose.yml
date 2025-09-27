@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  holz:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./public:/app/public
+      - ./index.js:/app/index.js
+      - ./package.json:/app/package.json
+    env_file:
+      - .env.dev.holz
+    restart: unless-stopped

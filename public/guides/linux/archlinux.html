@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arch Linux Guide - Holz</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>🏔️ Arch Linux Guide</h1>
+        <p>Setting up Yggdrasil and Alfis on Arch Linux</p>
+        <a href="/guides/linux" class="back-link">← Back to Linux</a>
+    </header>
+
+    <main>
+        <section>
+            <h2>Installing Yggdrasil</h2>
+            <pre><code>sudo pacman -Sy
+sudo pacman -S yggdrasil
+sudo systemctl enable --now yggdrasil</code></pre>
+        </section>
+
+        <section>
+            <h2>Configuring Yggdrasil</h2>
+            <p>Edit <code>/etc/yggdrasil.conf</code> and set our peers or <a href="https://publicpeers.neilalexander.dev/" target="_blank">choose your own</a>:</p>
+            <pre><code>  Peers: [
+    tls://novaprospekt.holz.gg:9001
+    tls://whiteforest.holz.gg:9001
+  ]</code></pre>
+            <pre><code>sudo systemctl restart yggdrasil</code></pre>
+        </section>
+
+        <section>
+            <h2>Installing Alfis</h2>
+            <pre><code>sudo wget -O /usr/bin/alfis https://github.com/Revertron/Alfis/releases/download/v0.8.5/alfis-linux-amd64-v0.8.5-nogui
+sudo chmod +x /usr/bin/alfis
+sudo wget -O /etc/systemd/system/alfis-default-config.service https://github.com/Revertron/Alfis/raw/v0.8.5/contrib/systemd/alfis-default-config.service
+sudo wget -O /etc/systemd/system/alfis.service https://github.com/Revertron/Alfis/raw/v0.8.5/contrib/systemd/alfis.service
+sudo wget -O /etc/systemd/system/alfis.sysusers https://github.com/Revertron/Alfis/raw/v0.8.5/contrib/systemd/alfis.sysusers
+sudo wget -O /etc/systemd/system/alfis.tmpfiles https://github.com/Revertron/Alfis/raw/v0.8.5/contrib/systemd/alfis.tmpfiles
+sudo systemctl enable --now alfis</code></pre>
+        </section>
+
+        <section>
+            <h2>Configuring Alfis</h2>
+            <p>Edit <code>/etc/alfis.conf</code> and set:</p>
+            <pre><code>listen = "127.0.0.1:53"</code></pre>
+            <p>Create <code>/etc/NetworkManager/conf.d/90-dns-none.conf</code>:</p>
+            <pre><code>[main]
+dns=none</code></pre>
+            <p>Set <code>/etc/resolv.conf</code> to:</p>
+            <pre><code>nameserver 127.0.0.1</code></pre>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with 💚 for the decentralized web</p>
+    </footer>
+
+    <script src="/js/tabs.js"></script>
+</body>
+</html>

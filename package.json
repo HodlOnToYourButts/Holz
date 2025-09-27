@@ -1,0 +1,19 @@
+{
+  "name": "holz",
+  "version": "0.0.1",
+  "description": "Growing the world tree - comprehensive guides for Yggdrasil mesh networking and Alfis naming system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["yggdrasil", "alfis", "mesh", "network", "guide", "world-tree", "decentralized"],
+  "author": "HodlOnToYourButts <jholz88@protonmail.com>",
+  "license": "AGPL-3.0",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
