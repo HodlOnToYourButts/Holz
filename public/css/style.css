@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    padding: 3rem 1rem;
+    padding: 3rem 1rem 1rem 1rem;
     color: white;
 }
 
@@ -49,6 +49,11 @@ h2 {
     color: #4a5568;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+}
+
+.technologies h2,
+.guides h2 {
+    margin-bottom: 0;
 }
 
 h3 {
@@ -156,6 +161,72 @@ h4 {
     transform: translateY(0);
 }
 
+.tech-logo {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+}
+
+.platform-card .tech-logo {
+    margin-bottom: 0;
+    margin-right: 1rem;
+}
+
+.platform-card:has(.tech-logo) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tech-logo-large {
+    height: 64px;
+    width: auto;
+    margin-bottom: 0;
+}
+
+.alfis-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: auto;
+    padding: 1.5rem;
+}
+
+.tech-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.alfis-logo {
+    margin-bottom: 0;
+}
+
+.alfis-card h3 {
+    margin: 0;
+}
+
+.yggdrasil-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    min-height: auto;
+    padding: 1.5rem;
+}
+
+
+.tech-description {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    text-align: center;
+}
+
 .intro p {
     font-size: 1.1rem;
     color: #4a5568;
@@ -192,7 +263,7 @@ code {
 
 footer {
     text-align: center;
-    padding: 2rem;
+    padding: 1rem 2rem 2rem 2rem;
     color: white;
     opacity: 0.8;
 }
