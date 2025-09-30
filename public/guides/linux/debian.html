@@ -16,7 +16,7 @@
 
     <main>
         <section>
-            <h2>Installing Yggdrasil</h2>
+            <h2>Install Yggdrasil</h2>
             <pre><code>sudo apt-get install apt-transport-https dirmngr
 sudo mkdir -p /usr/local/apt-keys
 gpg --fetch-keys https://neilalexander.s3.dualstack.eu-west-2.amazonaws.com/deb/key.txt
@@ -28,7 +28,7 @@ sudo systemctl enable --now yggdrasil</code></pre>
         </section>
 
         <section>
-            <h2>Configuring Yggdrasil</h2>
+            <h2>Configure Yggdrasil</h2>
             <p>Edit <code>/etc/yggdrasil.conf</code> and set our peers or <a href="https://publicpeers.neilalexander.dev/" target="_blank">choose your own</a>:</p>
             <pre><code>  Peers: [
     tls://novaprospekt.holz.gg:9001
@@ -38,7 +38,7 @@ sudo systemctl enable --now yggdrasil</code></pre>
         </section>
 
         <section>
-            <h2>Installing Alfis</h2>
+            <h2>Install Alfis</h2>
             <pre><code>sudo wget -O /usr/bin/alfis https://github.com/Revertron/Alfis/releases/download/v0.8.5/alfis-linux-amd64-v0.8.5-nogui
 sudo chmod +x /usr/bin/alfis
 sudo wget -O /etc/systemd/system/alfis-default-config.service https://github.com/Revertron/Alfis/raw/v0.8.5/contrib/systemd/alfis-default-config.service
@@ -49,9 +49,13 @@ sudo systemctl enable --now alfis</code></pre>
         </section>
 
         <section>
-            <h2>Configuring Alfis</h2>
+            <h2>Configure Alfis</h2>
             <p>Edit <code>/etc/alfis.conf</code> and set:</p>
             <pre><code>listen = "127.0.0.1:53"</code></pre>
+        </section>
+
+        <section>
+            <h2>Configure DNS</h2>
             <p>Create <code>/etc/NetworkManager/conf.d/90-dns-none.conf</code>:</p>
             <pre><code>[main]
 dns=none</code></pre>

@@ -16,36 +16,32 @@
 
     <main>
         <section>
-            <h2>Installing Yggdrasil</h2>
+            <h2>Install Yggdrasil</h2>
             <p>Download the Android APK: <a href="https://github.com/HodlOnToYourButts/Yggdrasil-android/releases/download/v0.1-020-hotyb-1/app-release-unsigned.apk">app-release-unsigned.apk</a></p>
             <p>Install the APK on your Android device.</p>
         </section>
 
         <section>
-            <h2>Configuring Yggdrasil</h2>
-            <p>Configure Yggdrasil to connect to our peers or <a href="https://publicpeers.neilalexander.dev/" target="_blank">choose your own</a>:</p>
+            <h2>Configure Yggdrasil</h2>
+            <p>Open Yggdrasil and press the <strong>Peers</strong> button:</p>
+            <p>Press the <strong>+</strong> button then enter <code>tls://novaprospekt.holz.gg:9001</code> <button onclick="navigator.clipboard.writeText('tls://novaprospekt.holz.gg:9001')" class="copy-btn">Copy</button></p>
+            <p>Press the <strong>+</strong> button then enter <code>tls://whiteforest.holz.gg:9001</code> <button onclick="navigator.clipboard.writeText('tls://whiteforest.holz.gg:9001')" class="copy-btn">Copy</button></p>
 
-            <h3>Adding Peers</h3>
-            <ol>
-                <li>Click the <strong>Peers</strong> button</li>
-                <li>Press the <strong>+</strong> button to add a new peer</li>
-                <li>Add: <code>tls://novaprospekt.holz.gg:9001</code></li>
-                <li>Press the <strong>+</strong> button again</li>
-                <li>Add: <code>tls://whiteforest.holz.gg:9001</code></li>
-            </ol>
-
-            <h3>Configuring DNS</h3>
-            <ol>
-                <li>Click the <strong>DNS Servers</strong> button</li>
-                <li>Press the <strong>+</strong> button</li>
-                <li>Add: <code>127.0.0.1:5353</code></li>
-            </ol>
+            <p style="margin-top: 1.5rem;">Go to <strong>Settings</strong> → <strong>Network & Internet</strong> → <strong>VPN</strong> → <strong>Yggdrasil</strong>:</p>
+            <p><strong>Always-on VPN</strong> <span class="toggle-on"></span></p>
+            <p><strong>Block connections without VPN</strong> <span class="toggle-off"></span></p>
         </section>
 
         <section>
-            <h2>Installing Alfis</h2>
+            <h2>Install Alfis</h2>
             <p>Download the Android APK: <a href="https://github.com/HodlOnToYourButts/Alfis-android/releases/download/v0.1.0-beta/alfis-android-v0.1.0-beta-release-unsigned.apk">alfis-android-v0.1.0-beta-release-unsigned.apk</a></p>
             <p>Install the APK on your Android device.</p>
+        </section>
+
+        <section>
+            <h2>Configure DNS</h2>
+            <p>Open Yggdrasil and click on <strong>DNS Servers</strong>:</p>
+            <p>Press the <strong>+</strong> button then enter <code>127.0.0.1:5353</code> <button onclick="navigator.clipboard.writeText('127.0.0.1:5353')" class="copy-btn">Copy</button></p>
         </section>
 
         <section>
